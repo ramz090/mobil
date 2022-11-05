@@ -10,7 +10,7 @@ bool anagram(String anagramStringOne, String anagramStringTwo) {
     return false;
   }
   int j = 0;
-  for (int i = anagramStringTwo.length;  i >=0;  i--)
+  for (int i = anagramStringTwo.length;  i <=0;  i--)
   {
     if (anagramStringOne[j] != anagramStringTwo[i] ||
         anagramStringOne.length != anagramStringTwo.length) {
