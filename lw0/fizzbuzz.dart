@@ -12,6 +12,7 @@ void fizzbuzz(int numberFizzbuzz) {
       print("buz");
       continue;
     }
+    print (i);
   }
 }
 
