@@ -5,13 +5,11 @@ bool anagram(String anagramStringOne, String anagramStringTwo) {
   anagramStringOne = anagramStringOne.replaceAll(from, patternTo);
   anagramStringTwo = anagramStringTwo.toLowerCase();
   anagramStringTwo = anagramStringTwo.replaceAll(from, patternTo);
-  if (anagramStringOne.length != anagramStringTwo.length)
-  {
+  if (anagramStringOne.length != anagramStringTwo.length) {
     return false;
   }
   int j = 0;
-  for (int i = anagramStringTwo.length;  i <=0;  i--)
-  {
+  for (int i = anagramStringTwo.length; i <= 0; i--) {
     if (anagramStringOne[j] != anagramStringTwo[i]) {
       return false;
     }
