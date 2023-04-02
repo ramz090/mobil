@@ -26,17 +26,20 @@ class _MyWidgetState extends State<mylist> {
   ];
 
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size;
+    var screenWidth = screenSize.width;
+    var screenHeight = screenSize.height;
     return Column(
       children: [
         Container(
           padding: const EdgeInsets.only(top: 8),
-          width: 500,
-          height: 50,
+          width: screenWidth,
+          height: screenHeight * 0.06,
           child: Row(
             children: [
               Container(
-                width: 350,
-                height: 50,
+                width: screenWidth * 0.7,
+                height: screenHeight * 0.06,
                 child: TextFormField(
                   controller: serch,
                   decoration: InputDecoration(
@@ -71,8 +74,8 @@ class _MyWidgetState extends State<mylist> {
                           });
                         },
                         child: Container(
-                            width: 100,
-                            height: 35,
+                            width: screenWidth * 0.2,
+                            height: screenHeight * 0.05,
                             decoration: BoxDecoration(
                               color: Color.fromARGB(255, 115, 7, 165),
                               border: Border.all(
@@ -89,7 +92,7 @@ class _MyWidgetState extends State<mylist> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Container(
-                                      height: 25,
+                                      height: screenHeight * 0.04,
                                       child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
@@ -107,8 +110,8 @@ class _MyWidgetState extends State<mylist> {
           ),
         ),
         Container(
-          width: 500,
-          height: 1000,
+          width: screenWidth,
+          height: screenHeight * 0.90,
           child: ListView.builder(
               padding: const EdgeInsets.all(8),
               itemCount: card.length,
